@@ -15,7 +15,7 @@ public class Test2 extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException{
 		PrintWriter out=response.getWriter();
-		out.println("iiiiiiiiiiiii");
+		out.println("test2");
 		out.println(new Date());
 	}
 }
