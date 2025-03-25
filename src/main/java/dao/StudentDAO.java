@@ -16,7 +16,7 @@ public class StudentDAO extends DAO {
 		Connection con=getConnection();
 		
 		PreparedStatement st=con.prepareStatement(
-				"SELECT s.student_id, s.student_name, c.class_name  FROM scores sc JOIN student s ON sc.student_id = s.student_id JOIN class c ON s.class_id = c.class_id JOIN school sch ON s.school_id = sch.school_id JOIN subjects sub ON sc.subject_id = sub.subject_id JOIN teacher t ON sub.teacher_id = t.teacher_id where s.student_name like ?");
+				"SELECT * FROM scores sc JOIN student s ON sc.student_id = s.student_id JOIN class c ON s.class_id = c.class_id JOIN school sch ON s.school_id = sch.school_id JOIN subjects sub ON sc.subject_id = sub.subject_id JOIN teacher t ON sub.teacher_id = t.teacher_id where s.student_name like ?");
 		
 		st.setString(1, "%"+keyword+"%");
 		
