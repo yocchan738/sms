@@ -1,4 +1,4 @@
-package student_manegement;
+package student_score_manegement;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 import bean.Bean;
 import dao.StudentDAO;
 
-@WebServlet(urlPatterns = {"/studentmanegement/studentlist"})
-public class StudentList extends HttpServlet {
+@WebServlet(urlPatterns = {"/studentscoremanegement/studentscoresearch"})
+public class StudentScoreSearch extends HttpServlet {
 
 	public void doGet(
 		HttpServletRequest request, HttpServletResponse response
@@ -24,7 +24,7 @@ public class StudentList extends HttpServlet {
 			StudentDAO dao=new StudentDAO();
 			List<Bean> list=dao.searchStudent("");
 			request.setAttribute("list", list);
-			request.getRequestDispatcher("/student_manegement/student_list.jsp").forward(request, response);
+			request.getRequestDispatcher("/student_score_manegement/student_score_search.jsp").forward(request, response);
 		} catch(Exception e) {
 			e.printStackTrace(out);
 		}
