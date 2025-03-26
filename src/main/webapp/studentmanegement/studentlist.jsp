@@ -8,8 +8,25 @@
 <title>Insert title here</title>
 </head>
 <body>
+<table border="1">
+<thead>
+<tr>
+<th>学生ID</th>
+<th>学生名</th>
+<th>学校名</th>
+<th>クラス名</th>
+</tr>
+</thead>
+<tbody>
 <c:forEach var="s" items="${list }">
-	${s.student_id }:${s.student_name }:${s.subject_name }:${s.score_value }<br>
+	<tr>
+	<th>${s.student_id }</th>
+	<td>${s.student_name }</td>
+	<td>${s.school_name }</td>
+	<td>${s.class_name }</td>
+	</tr>
 </c:forEach>
+</tbody>
+</table>
 </body>
 </html>

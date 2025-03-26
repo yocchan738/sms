@@ -10,7 +10,7 @@ import bean.Bean;
 
 public class StudentDAO extends DAO {
 
-	public List<Bean> search(String keyword) throws Exception{
+	public List<Bean> searchScores(String keyword) throws Exception{
 		List<Bean> list=new ArrayList<>();
 		
 		Connection con=getConnection();
@@ -36,6 +36,124 @@ public class StudentDAO extends DAO {
 	        s.setTeacher_name(rs.getString("teacher_name"));
 	        s.setScore_id(rs.getInt("score_id"));
 	        s.setScore_value(rs.getInt("score_value"));
+	        list.add(s);
+		}
+		
+		st.close();
+		con.close();
+		
+		return list;
+	}
+	public List<Bean> searchStudent(String keyword) throws Exception{
+		List<Bean> list=new ArrayList<>();
+		
+		Connection con=getConnection();
+		
+		PreparedStatement st=con.prepareStatement(
+				"SELECT * FROM student s join class c on s.class_id=c.class_id join school sch on s.school_id=sch.school_id where s.student_name like ?");
+		
+		st.setString(1, "%"+keyword+"%");
+		
+		ResultSet rs=st.executeQuery();
+		
+		while (rs.next()) {
+			Bean s=new Bean();
+			s.setClass_id(rs.getInt("class_id"));
+			s.setClass_name(rs.getString("class_name"));
+			s.setSchool_id(rs.getInt("school_id"));
+			s.setSchool_name(rs.getString("school_name"));
+			s.setStudent_id(rs.getInt("student_id"));
+	        s.setStudent_name(rs.getString("student_name"));
+	        list.add(s);
+		}
+		
+		st.close();
+		con.close();
+		
+		return list;
+	}
+	public List<Bean> searchClass() throws Exception{
+		List<Bean> list=new ArrayList<>();
+		
+		Connection con=getConnection();
+		
+		PreparedStatement st=con.prepareStatement(
+				"SELECT * FROM class");
+		
+		ResultSet rs=st.executeQuery();
+		
+		while (rs.next()) {
+			Bean s=new Bean();
+			s.setClass_id(rs.getInt("class_id"));
+			s.setClass_name(rs.getString("class_name"));
+	        list.add(s);
+		}
+		
+		st.close();
+		con.close();
+		
+		return list;
+	}
+	public List<Bean> searchSchool(String keyword) throws Exception{
+		List<Bean> list=new ArrayList<>();
+		
+		Connection con=getConnection();
+		
+		PreparedStatement st=con.prepareStatement(
+				"SELECT * FROM school");
+		
+		ResultSet rs=st.executeQuery();
+		
+		while (rs.next()) {
+			Bean s=new Bean();
+			s.setSchool_id(rs.getInt("school_id"));
+			s.setSchool_name(rs.getString("school_name"));
+	        list.add(s);
+		}
+		
+		st.close();
+		con.close();
+		
+		return list;
+	}
+	public List<Bean> searchSubject(String keyword) throws Exception{
+		List<Bean> list=new ArrayList<>();
+		
+		Connection con=getConnection();
+		
+		PreparedStatement st=con.prepareStatement(
+				"SELECT * FROM subject sub join teacher t on sub.teacher_id=t.teacher_id");
+		
+		ResultSet rs=st.executeQuery();
+		
+		while (rs.next()) {
+			Bean s=new Bean();
+			s.setSubject_id(rs.getInt("subject_id"));
+	        s.setSubject_name(rs.getString("subject_name"));
+	        s.setTeacher_id(rs.getInt("teacher_id"));
+	        s.setTeacher_name(rs.getString("teacher_name"));
+	        list.add(s);
+		}
+		
+		st.close();
+		con.close();
+		
+		return list;
+	}
+	public List<Bean> searchTeacher(String keyword) throws Exception{
+		List<Bean> list=new ArrayList<>();
+		
+		Connection con=getConnection();
+		
+		PreparedStatement st=con.prepareStatement(
+				"SELECT * FROM teacher");
+		
+		ResultSet rs=st.executeQuery();
+		
+		while (rs.next()) {
+			Bean s=new Bean();
+			s.setTeacher_id(rs.getInt("teacher_id"));
+	        s.setTeacher_name(rs.getString("teacher_name"));
 	        list.add(s);
 		}
 		
