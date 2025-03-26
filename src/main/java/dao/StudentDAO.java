@@ -467,4 +467,45 @@ public class StudentDAO extends DAO {
 		con.close();
 		return line;
 	}
+	/**
+     * 教科情報を更新するメソッド
+     * 
+     * @param Bean 更新する教科オブジェクト
+     * @return int 更新された行数
+     */
+	public int updateSubjects(Bean sub) throws Exception{
+		Connection con=getConnection();
+		
+		PreparedStatement st=con.prepareStatement(
+				"update subjects set subject_name=?, teacher_id=? where subject_id=?");
+		st.setString(1, sub.getSubject_name());
+		st.setInt(2, sub.getTeacher_id());
+		st.setInt(3, sub.getSubject_id());
+		int line=st.executeUpdate();
+		
+		st.close();
+		con.close();
+		return line;
+	}
+	/**
+     * 成績情報を更新するメソッド
+     * 
+     * @param Bean 更新する成績オブジェクト
+     * @return int 更新された行数
+     */
+	public int updateScores(Bean sc) throws Exception{
+		Connection con=getConnection();
+		
+		PreparedStatement st=con.prepareStatement(
+				"update Scores set student_id=?, subject_id=?, score_value=? where score_id=?");
+		st.setInt(1, sc.getStudent_id());
+		st.setInt(2, sc.getSubject_id());
+		st.setInt(3, sc.getScore_value());
+		st.setInt(4, sc.getScore_id());
+		int line=st.executeUpdate();
+		
+		st.close();
+		con.close();
+		return line;
+	}
 }
