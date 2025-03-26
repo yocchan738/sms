@@ -508,4 +508,59 @@ public class StudentDAO extends DAO {
 		con.close();
 		return line;
 	}
+	
+	/**
+     * クラス情報を削除するメソッド
+     * 
+     * @param Bean 削除するクラスオブジェクト
+     * @return int 削除された行数
+     */
+	public int deleteClass(Bean c) throws Exception{
+		Connection con=getConnection();
+		
+		PreparedStatement st=con.prepareStatement(
+				"delete from class where class_id=?");
+		st.setInt(1, c.getClass_id());
+		int line=st.executeUpdate();
+		
+		st.close();
+		con.close();
+		return line;
+	}
+	/**
+     * 学校情報を削除するメソッド
+     * 
+     * @param Bean 削除する学校オブジェクト
+     * @return int 削除された行数
+     */
+	public int deleteSchool(Bean sch) throws Exception{
+		Connection con=getConnection();
+		
+		PreparedStatement st=con.prepareStatement(
+				"delete from school where school_id=?");
+		st.setInt(1, sch.getSchool_id());
+		int line=st.executeUpdate();
+		
+		st.close();
+		con.close();
+		return line;
+	}
+	/**
+     * 学生情報を削除するメソッド
+     * 
+     * @param Bean 削除する学生オブジェクト
+     * @return int 削除された行数
+     */
+	public int deleteStudent(Bean s) throws Exception{
+		Connection con=getConnection();
+		
+		PreparedStatement st=con.prepareStatement(
+				"delete from student where student_id=?");
+		st.setInt(1, s.getStudent_id());
+		int line=st.executeUpdate();
+		
+		st.close();
+		con.close();
+		return line;
+	}
 }
