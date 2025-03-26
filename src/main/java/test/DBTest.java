@@ -23,7 +23,7 @@ public class DBTest extends HttpServlet {
 		
 		try {
 			StudentDAO dao=new StudentDAO();
-			List<Bean> list=dao.search("");
+			List<Bean> list=dao.searchScores("");
 			request.setAttribute("list", list);
 			request.getRequestDispatcher("/test/dbtest.jsp").forward(request, response);
 		} catch(Exception e) {

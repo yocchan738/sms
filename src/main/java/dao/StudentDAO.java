@@ -122,7 +122,7 @@ public class StudentDAO extends DAO {
 		Connection con=getConnection();
 		
 		PreparedStatement st=con.prepareStatement(
-				"SELECT * FROM subject sub join teacher t on sub.teacher_id=t.teacher_id");
+				"SELECT * FROM subjects sub join teacher t on sub.teacher_id=t.teacher_id");
 		
 		ResultSet rs=st.executeQuery();
 		
@@ -161,5 +161,83 @@ public class StudentDAO extends DAO {
 		con.close();
 		
 		return list;
+	}
+	
+	public int insertClass(Bean c) throws Exception{
+		Connection con=getConnection();
+		
+		PreparedStatement st=con.prepareStatement(
+				"insert into class(class_name) values(?)");
+		st.setString(1, c.getClass_name());
+		int line=st.executeUpdate();
+		
+		st.close();
+		con.close();
+		return line;
+	}
+	public int insertSchool(Bean sch) throws Exception{
+		Connection con=getConnection();
+		
+		PreparedStatement st=con.prepareStatement(
+				"insert into school(school_name) values(?)");
+		st.setString(1, sch.getSchool_name());
+		int line=st.executeUpdate();
+		
+		st.close();
+		con.close();
+		return line;
+	}
+	public int insertStudent(Bean s) throws Exception{
+		Connection con=getConnection();
+		
+		PreparedStatement st=con.prepareStatement(
+				"insert into student(student_name,class_id,school_id) values(?,?,?)");
+		st.setString(1, s.getStudent_name());
+		st.setInt(2, s.getClass_id());
+		st.setInt(3, s.getSchool_id());
+		int line=st.executeUpdate();
+		
+		st.close();
+		con.close();
+		return line;
+	}
+	public int insertTeacher(Bean t) throws Exception{
+		Connection con=getConnection();
+		
+		PreparedStatement st=con.prepareStatement(
+				"insert into teacher(teacher_name) values(?)");
+		st.setString(1, t.getTeacher_name());
+		int line=st.executeUpdate();
+		
+		st.close();
+		con.close();
+		return line;
+	}
+	public int insertSubject(Bean sub) throws Exception{
+		Connection con=getConnection();
+		
+		PreparedStatement st=con.prepareStatement(
+				"insert into subjects(subject_name,teacher_id) values(?,?)");
+		st.setString(1, sub.getSubject_name());
+		st.setInt(2, sub.getTeacher_id());
+		int line=st.executeUpdate();
+		
+		st.close();
+		con.close();
+		return line;
+	}
+	public int insertScores(Bean sc) throws Exception{
+		Connection con=getConnection();
+		
+		PreparedStatement st=con.prepareStatement(
+				"insert into scores(student_id,subject_id,score_value) values(?,?,?)");
+		st.setInt(1, sc.getStudent_id());
+		st.setInt(2, sc.getSubject_id());
+		st.setInt(3, sc.getScore_value());
+		int line=st.executeUpdate();
+		
+		st.close();
+		con.close();
+		return line;
 	}
 }
