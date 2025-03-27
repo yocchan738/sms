@@ -223,6 +223,36 @@ public class StudentDAO extends DAO {
 		return list;
 	}
 	/**
+	 * クラス表をIDで返すメソッド
+	 * 
+	 * @param keyword 検索キーワード（完全一致）
+	 * @return List<Bean> 結果のリスト
+	 */
+	public List<Bean> searchClassID(int keyword) throws Exception{
+		List<Bean> list=new ArrayList<>();
+		
+		Connection con=getConnection();
+		
+		PreparedStatement st=con.prepareStatement(
+				"SELECT * FROM class where class_id=?");
+		
+		st.setInt(1, keyword);
+		
+		ResultSet rs=st.executeQuery();
+		
+		while (rs.next()) {
+			Bean s=new Bean();
+			s.setClass_id(rs.getInt("class_id"));
+			s.setClass_name(rs.getString("class_name"));
+	        list.add(s);
+		}
+		
+		st.close();
+		con.close();
+		
+		return list;
+	}
+	/**
 	 * 学校表を返すメソッド
 	 * 
 	 * @return List<Bean> 結果のリスト
@@ -234,6 +264,36 @@ public class StudentDAO extends DAO {
 		
 		PreparedStatement st=con.prepareStatement(
 				"SELECT * FROM school");
+		
+		ResultSet rs=st.executeQuery();
+		
+		while (rs.next()) {
+			Bean s=new Bean();
+			s.setSchool_id(rs.getInt("school_id"));
+			s.setSchool_name(rs.getString("school_name"));
+	        list.add(s);
+		}
+		
+		st.close();
+		con.close();
+		
+		return list;
+	}
+	/**
+	 * 学校表をIDで返すメソッド
+	 * 
+	 * @param keyword 検索キーワード（完全一致）
+	 * @return List<Bean> 結果のリスト
+	 */
+	public List<Bean> searchSchoolID(int keyword) throws Exception{
+		List<Bean> list=new ArrayList<>();
+		
+		Connection con=getConnection();
+		
+		PreparedStatement st=con.prepareStatement(
+				"SELECT * FROM school where school_id");
+		
+		st.setInt(1, keyword);
 		
 		ResultSet rs=st.executeQuery();
 		
@@ -279,6 +339,38 @@ public class StudentDAO extends DAO {
 		return list;
 	}
 	/**
+	 * 教科表をIDで返すメソッド
+	 * 
+	 * @param keyword 検索キーワード（完全一致）
+	 * @return List<Bean> 結果のリスト
+	 */
+	public List<Bean> searchSubjectID(int keyword) throws Exception{
+		List<Bean> list=new ArrayList<>();
+		
+		Connection con=getConnection();
+		
+		PreparedStatement st=con.prepareStatement(
+				"SELECT * FROM subjects sub join teacher t on sub.teacher_id=t.teacher_id where sub.subject_id=?");
+		
+		st.setInt(1, keyword);
+		
+		ResultSet rs=st.executeQuery();
+		
+		while (rs.next()) {
+			Bean s=new Bean();
+			s.setSubject_id(rs.getInt("subject_id"));
+	        s.setSubject_name(rs.getString("subject_name"));
+	        s.setTeacher_id(rs.getInt("teacher_id"));
+	        s.setTeacher_name(rs.getString("teacher_name"));
+	        list.add(s);
+		}
+		
+		st.close();
+		con.close();
+		
+		return list;
+	}
+	/**
 	 * 教諭表を返すメソッド
 	 * 
 	 * @return List<Bean> 結果のリスト
@@ -290,6 +382,36 @@ public class StudentDAO extends DAO {
 		
 		PreparedStatement st=con.prepareStatement(
 				"SELECT * FROM teacher");
+		
+		ResultSet rs=st.executeQuery();
+		
+		while (rs.next()) {
+			Bean s=new Bean();
+			s.setTeacher_id(rs.getInt("teacher_id"));
+	        s.setTeacher_name(rs.getString("teacher_name"));
+	        list.add(s);
+		}
+		
+		st.close();
+		con.close();
+		
+		return list;
+	}
+	/**
+	 * 教諭表をIDで返すメソッド
+	 * 
+	 * @param keyword 検索キーワード（完全一致）
+	 * @return List<Bean> 結果のリスト
+	 */
+	public List<Bean> searchTeachersID(int keyword) throws Exception{
+		List<Bean> list=new ArrayList<>();
+		
+		Connection con=getConnection();
+		
+		PreparedStatement st=con.prepareStatement(
+				"SELECT * FROM teacher where teacher_id");
+		
+		st.setInt(1, keyword);
 		
 		ResultSet rs=st.executeQuery();
 		
