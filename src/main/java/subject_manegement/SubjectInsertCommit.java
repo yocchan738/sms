@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import bean.Bean;
 import dao.StudentDAO;
 
-@WebServlet(urlPatterns = {"/"})
+@WebServlet(urlPatterns = {"/scoremanegement/insert/commit"})
 public class SubjectInsertCommit extends HttpServlet{
 
 	// doPostメソッド：フォームから送信されたデータを処理
