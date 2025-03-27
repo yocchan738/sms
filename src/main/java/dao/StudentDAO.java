@@ -200,7 +200,7 @@ public class StudentDAO extends DAO {
 	 * 
 	 * @return List<Bean> 結果のリスト
 	 */
-	public List<Bean> searchClass() throws Exception{
+	public List<Bean> searchClass(String keyword) throws Exception{
 		List<Bean> list=new ArrayList<>();
 		
 		Connection con=getConnection();
