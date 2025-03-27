@@ -17,9 +17,10 @@
 	<div>
 	変更する科目や教員名を選択してください。<br>
 	<form action="/sms/subjectmanegement/update/commit" method="post">
- 科目名:<select name="subject_id">
+	<input type="hidden" name="subject_id" value="${select_subject_id }">
+ 科目名:<select name="subject_name">
 		<c:forEach var="s" items="${subject_list}">
-			<option value="${s.subject_id}" ${s.subject_id eq select_subject_id ? "selected" : "" }>${s.subject_name}</option>
+			<option value="${s.subject_name}" ${s.subject_id eq select_subject_id ? "selected" : "" }>${s.subject_name}</option>
 		</c:forEach>
 		</select><br>
  教員名:<select name="teacher_id">

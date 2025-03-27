@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div>
-	<form action="/sms/studentmanegement/studentinsertcommit" method="post">
+	<form action="/sms/studentmanegement/insert/commit" method="post">
 		学生名　:<input type="text" name="name"><br>
 		学校名　:<select name="school_id">
 		<c:forEach var="s" items="${school_list }">
