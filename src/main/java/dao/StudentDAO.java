@@ -409,7 +409,7 @@ public class StudentDAO extends DAO {
 		Connection con=getConnection();
 		
 		PreparedStatement st=con.prepareStatement(
-				"SELECT * FROM teacher where teacher_id");
+				"SELECT * FROM teacher where teacher_id=?");
 		
 		st.setInt(1, keyword);
 		
