@@ -131,6 +131,37 @@ public class StudentDAO extends DAO {
 		return list;
 	}
 	/**
+	 * 成績表を学生IDで検索し、合計と平均を返すメソッド
+	 * 
+	 * @param keyword 検索キーワード（完全一致）
+	 * @return List<Bean> 検索結果のリスト
+	 */
+	public List<Bean> searchScoresSumAvg(int keyword) throws Exception{
+		List<Bean> list=new ArrayList<>();
+		
+		Connection con=getConnection();
+		
+		PreparedStatement st=con.prepareStatement(
+				"SELECT s.student_name, sum(sc.score_value) as sum, avg(sc.score_value) as avg FROM SCORES sc join student s on sc.student_id=s.student_id join school sch on s.school_id=sch.school_id join class c on s.class_id=c.class_id join subjects sub on sc.subject_id=sub.subject_id join teacher t on sub.teacher_id=t.teacher_id where s.student_id=? group by s.student_name");
+		
+		st.setInt(1, keyword);
+		
+		ResultSet rs=st.executeQuery();
+		
+		while (rs.next()) {
+			Bean s=new Bean();
+			s.setStudent_name(rs.getString("student_name"));
+			s.setScore_sum(rs.getInt("sum"));
+			s.setScore_avg(rs.getDouble("avg"));
+			list.add(s);
+		}
+		
+		st.close();
+		con.close();
+		
+		return list;
+	}
+	/**
 	 * 学生表を学生名で検索するメソッド
 	 * 
 	 * @param keyword 検索キーワード（部分一致）
@@ -557,6 +588,60 @@ public class StudentDAO extends DAO {
 		PreparedStatement st=con.prepareStatement(
 				"delete from student where student_id=?");
 		st.setInt(1, s.getStudent_id());
+		int line=st.executeUpdate();
+		
+		st.close();
+		con.close();
+		return line;
+	}
+	/**
+     * 教諭情報を削除するメソッド
+     * 
+     * @param Bean 削除する教諭オブジェクト
+     * @return int 削除された行数
+     */
+	public int deleteTeacher(Bean s) throws Exception{
+		Connection con=getConnection();
+		
+		PreparedStatement st=con.prepareStatement(
+				"delete from teacher where teacher_id=?");
+		st.setInt(1, s.getTeacher_id());
+		int line=st.executeUpdate();
+		
+		st.close();
+		con.close();
+		return line;
+	}
+	/**
+     * 科目情報を削除するメソッド
+     * 
+     * @param Bean 削除する科目オブジェクト
+     * @return int 削除された行数
+     */
+	public int deleteSubjects(Bean s) throws Exception{
+		Connection con=getConnection();
+		
+		PreparedStatement st=con.prepareStatement(
+				"delete from subjects where subject_id=?");
+		st.setInt(1, s.getSubject_id());
+		int line=st.executeUpdate();
+		
+		st.close();
+		con.close();
+		return line;
+	}
+	/**
+     * 成績情報を削除するメソッド
+     * 
+     * @param Bean 削除する成績オブジェクト
+     * @return int 削除された行数
+     */
+	public int deleteScores(Bean s) throws Exception{
+		Connection con=getConnection();
+		
+		PreparedStatement st=con.prepareStatement(
+				"delete from scores where score_id=?");
+		st.setInt(1, s.getScore_id());
 		int line=st.executeUpdate();
 		
 		st.close();

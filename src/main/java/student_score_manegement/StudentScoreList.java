@@ -21,9 +21,12 @@ public class StudentScoreList extends HttpServlet {
 	) throws ServletException, IOException{
 		PrintWriter out=response.getWriter();
 		try {
+			int id=Integer.parseInt(request.getParameter("student_id"));
 			StudentDAO dao=new StudentDAO();
-			List<Bean> list=dao.searchScoresStudent(Integer.parseInt(request.getParameter("student_id")));
+			List<Bean> list=dao.searchScoresStudent(id);
 			request.setAttribute("list", list);
+			List<Bean> list_sum_avg=dao.searchScoresSumAvg(id);
+			request.setAttribute("list_sum_avg", list_sum_avg);
 			request.getRequestDispatcher("/student_score_manegement/student_score_list.jsp").forward(request, response);
 		} catch(Exception e) {
 			e.printStackTrace(out);

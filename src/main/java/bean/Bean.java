@@ -16,6 +16,8 @@ public class Bean implements Serializable {
 	private String teacher_name;
 	private int score_id;
 	private int score_value;
+	private int score_sum;
+	private double score_avg;
 	
 	public int getClass_id() {
         return class_id;
@@ -111,5 +113,21 @@ public class Bean implements Serializable {
 
     public void setScore_value(int score_value) {
         this.score_value = score_value;
+    }
+    
+    public int getScore_sum() {
+        return score_sum;
+    }
+
+    public void setScore_sum(int score_sum) {
+        this.score_sum = score_sum;
+    }
+    
+    public double getScore_avg() {
+        return score_avg;
+    }
+
+    public void setScore_avg(double score_avg) {
+        this.score_avg = score_avg;
     }
 }
