@@ -7,19 +7,24 @@
 <title>学生情報の更新</title>
 </head>
 <body>
-
+<c:forEach var="s" items="${select_student }">
+	<c:set var="select_student_name" value="${s.student_name }"/>
+</c:forEach>
+<c:forEach var="c" items="${select_class }">
+	<c:set var="select_class_id" value="${c.class_id }"/>
+</c:forEach>
 <div>
     <h2>学生情報の更新</h2>
     <form action="/sms/studentmanegement/studentupdatecomit" method="post">
 
         お名前：
-        <input type="text" name="student_name" value="${student.student_name}">
+        <input type="text" name="student_name" value="${select_student_name}">
 <br>
 
         クラス名：
         <select name="class_id">
             <c:forEach var="c" items="${class_list}">
-                <option value="${c.class_id}">${c.class_name}</option>
+                <option value="${c.class_id}" ${c.class_id eq select_class_id ? "selected" : "" }>${c.class_name}</option>
             </c:forEach>
         </select><br>
 
