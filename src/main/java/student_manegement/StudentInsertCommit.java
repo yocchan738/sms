@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import bean.Bean;
 import dao.StudentDAO;
  
-@WebServlet(urlPatterns= {"/studentmanegement/studentinsertcommit"})
+@WebServlet(urlPatterns= {"/studentmanegement/insert/commit"})
 public class StudentInsertCommit extends HttpServlet{
  
 	public void doPost(
