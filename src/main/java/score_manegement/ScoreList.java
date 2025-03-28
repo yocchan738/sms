@@ -29,4 +29,5 @@ public class ScoreList extends HttpServlet {
 			e.printStackTrace(out);
 		}
 	}
+	
 }

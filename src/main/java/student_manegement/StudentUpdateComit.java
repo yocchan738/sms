@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import bean.Bean;
 import dao.StudentDAO;
  
-@WebServlet(urlPatterns= {"/studentmanegement/studentupdatetcommit"})
+@WebServlet(urlPatterns= {"/studentmanegement/studentupdatecomit"})
 public class StudentUpdateComit extends HttpServlet{
  
 	public void doPost(
@@ -33,10 +33,12 @@ public class StudentUpdateComit extends HttpServlet{
 			StudentDAO dao=new StudentDAO();
 			int line=dao.updateStudent(p);
 			if (line>0) {
-				out.println("<div class='content'><p>更新に成功しました。</p>");
+				
 			}
+			request.getRequestDispatcher("/student_manegement/student_update_comit.jsp").forward(request, response);
 		} catch (Exception e) {
 			e.printStackTrace(out);
+			out.println("失敗");
 		}
 	}
 }

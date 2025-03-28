@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<form action="/sms/subjectmanegement/update/commit" method="post">
  		<c:forEach var="s" items="${subject_select_id }">
  			<c:set var="select_subject_id" value="${s.subject_id }"/>
  		</c:forEach>
@@ -16,7 +17,7 @@
  		</c:forEach>
 	<div>
 	変更する科目や教員名を選択してください。<br>
-	<form action="/sms/subjectmanegement/update/commit" method="post">
+	
 	<input type="hidden" name="subject_id" value="${select_subject_id }">
  科目名:<select name="subject_name">
 		<c:forEach var="s" items="${subject_list}">

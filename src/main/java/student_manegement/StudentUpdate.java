@@ -16,13 +16,20 @@ import dao.StudentDAO;
 @WebServlet(urlPatterns = { "/studentmanegement/studentupdate" })
 public class StudentUpdate extends HttpServlet {
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	PrintWriter out = response.getWriter();
         try {
+ 
             StudentDAO dao = new StudentDAO();
-            List<Bean> student = dao.searchStudent("");
+            List<Bean> student_list = dao.searchStudent("");
+           
+            List<Bean> class_list = dao.searchClass("");
+            List<Bean> school_list = dao.searchSchool("");
+            
+            request.setAttribute("student_list", student_list);
 
-            request.setAttribute("student", student);
+            request.setAttribute("class_list", class_list);
+            request.setAttribute("school_list", school_list);
             request.getRequestDispatcher("/student_manegement/student_update.jsp").forward(request, response);
         } catch (Exception e) {
         	e.printStackTrace(out);
