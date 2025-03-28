@@ -2,7 +2,8 @@
     pageEncoding="UTF-8"%> 
     
 <jsp:include page="/parts/header.jsp"></jsp:include>
-<div class="side_menu">
-<p>こんにちは</p>
+<jsp:include page="/parts/sidemenu.jsp"></jsp:include>
+<div class=main">
+<p>Topページ</p>
 </div>
 <jsp:include page="/parts/footer.jsp"></jsp:include>
