@@ -21,9 +21,9 @@ public class StudentUpdateSelect extends HttpServlet {
 
         try {
             StudentDAO dao = new StudentDAO();
-            List<Bean> list = dao.searchStudent("");
+            List<Bean> student_list = dao.searchStudent("");
 
-            request.setAttribute("list", list);
+            request.setAttribute("student_list", student_list);
             request.getRequestDispatcher("/student_manegement/student_update_select.jsp").forward(request, response);
         } catch (Exception e) {
         	e.printStackTrace(out);
