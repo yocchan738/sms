@@ -106,16 +106,17 @@ ul li a {
 
   a.title {
     margin-left: 20px;
-    font-weight: bold;                 /* 太字に設定 */
-    color: #333;                       /* リンクの文字色をダークグレーに設定 */
-    text-decoration: none;             /* 下線をなくす */
-    transition: color 0.3s, transform 0.3s; /* 色と変形にスムーズな遷移を追加 */
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s; 
+    font-size: 3vw;
   }
   
   a.title:hover {
-    color: #737275;                   /* ホバー時の文字色をオレンジに設定 */
-    text-decoration: underline;        /* ホバー時に下線を追加 */
-    transform: scale(1.1);             /* ホバー時に少し大きくする */
+    color: #737275; 
+    text-decoration: underline;
+    transform: scale(1.1);
   }
 
   .wrapper{

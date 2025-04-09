@@ -15,13 +15,13 @@
     <div class="item_menu">
       <div class="menu">
 
-        <a class="item" href=>
+        <a class="item" href=/sms/studentmanagement/studentlist>
           <i class="search icon"></i>学生一覧
         </a>
-        <a class="item" href=>
+        <a class="item" href=/sms/studentmanagement/insert>
           <i class="search icon"></i>学生登録
         </a>
-        <a class="item" href=>
+        <a class="item" href=/sms/studentmanagement/studentselect>
           <i class="search icon"></i>学生変更
         </a>
 
@@ -52,14 +52,12 @@
     </div>
 
     <div class="sidebar_item">
-      <b>学生別成績一覧</b>
+      <b>成績管理機能</b>
     </div>
     <div class="item _menu">
       <div class="menu">
 
-        <a class="item" href=>
-          <i class="search icon"></i>学生管理一覧
-        </a>
+
         <a class="item" href=>
           <i class="search icon"></i>学生別成績一覧
         </a>
