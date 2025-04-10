@@ -1,13 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
+<jsp:include page="/parts/header.jsp"></jsp:include>
+<jsp:include page="/parts/sidemenu.jsp"></jsp:include>
+<div class=main">
 <h2>削除したい学生を選択してください。</h2><br>
 	<div>
 		<form action="/sms/studentmanagement/delete/commit" method="post">
@@ -20,5 +16,5 @@
 		</form>
 
 	</div>
-</body>
-</html>
+</div>
+<jsp:include page="/parts/footer.jsp"></jsp:include>

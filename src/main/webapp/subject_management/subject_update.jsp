@@ -1,13 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
+<jsp:include page="/parts/header.jsp"></jsp:include>
+<jsp:include page="/parts/sidemenu.jsp"></jsp:include>
+<div class=main">
 <form action="/sms/subjectmanagement/update/commit" method="post">
  		<c:forEach var="s" items="${subject_select_id }">
  			<c:set var="select_subject_id" value="${s.subject_id }"/>
@@ -31,5 +27,4 @@
 		</select><br>
 		<input type="submit" value="確定">
 	</form></div>
-</body>
-</html>
+<jsp:include page="/parts/footer.jsp"></jsp:include>

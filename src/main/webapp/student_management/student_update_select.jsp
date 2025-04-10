@@ -1,12 +1,8 @@
 <%@page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>ok</title>
-</head>
-<body>
-    <div>
+<jsp:include page="/parts/header.jsp"></jsp:include>
+<jsp:include page="/parts/sidemenu.jsp"></jsp:include>
+<div class=main">
     <p>データを更新する学生を選んでください</p><br>
     <form action="/sms/studentmanegement/update" method="post">
         <select name="id">
@@ -18,5 +14,4 @@
     </form>
 
     </div>
-</body>
-</html>
+<jsp:include page="/parts/footer.jsp"></jsp:include>
