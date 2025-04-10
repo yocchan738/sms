@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <jsp:include page="/parts/header.jsp"></jsp:include>
 <jsp:include page="/parts/sidemenu.jsp"></jsp:include>
-<div class=main">
+<div class="main">
 <c:forEach var="sa" items="${list_sum_avg }">
 	<c:set var="student_name" value="${sa.student_name }"/>
 	<c:set var="sum" value="${sa.score_sum }"/>
