@@ -21,7 +21,7 @@ public class AuthenticationDAO extends DAO {
 		
 		while (rs.next()) {
 			authentication=new Authentication();
-			authentication.setId(rs.getInt("id"));
+			authentication.setId(rs.getInt("user_id"));
 			authentication.setLoginId(rs.getString("login_id"));
 			authentication.setPassword(rs.getString("password"));
 		}
