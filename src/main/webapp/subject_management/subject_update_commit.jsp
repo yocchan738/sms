@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <jsp:include page="/parts/header.jsp"></jsp:include>
 <jsp:include page="/parts/sidemenu.jsp"></jsp:include>
-<div class=main">
+<div class="main">
 	<p>変更に成功しました。</p>
 </div>
 <jsp:include page="/parts/footer.jsp"></jsp:include>

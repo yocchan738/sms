@@ -137,6 +137,7 @@ ul li a {
   }
   
   .main {
+    margin-top: 5%;
     margin-left: 15%; 
   }
 

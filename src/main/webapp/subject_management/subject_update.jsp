@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <jsp:include page="/parts/header.jsp"></jsp:include>
 <jsp:include page="/parts/sidemenu.jsp"></jsp:include>
-<div class=main">
+<div class="main">
 <form action="/sms/subjectmanagement/update/commit" method="post">
  		<c:forEach var="s" items="${subject_select_id }">
  			<c:set var="select_subject_id" value="${s.subject_id }"/>

@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <jsp:include page="/parts/header.jsp"></jsp:include>
 <jsp:include page="/parts/sidemenu.jsp"></jsp:include>
-<div class=main">
+<div class="main">
     <p>データを更新する学生を選んでください</p><br>
     <form action="/sms/studentmanegement/update" method="post">
         <select name="id">

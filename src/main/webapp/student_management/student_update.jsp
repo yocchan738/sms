@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <jsp:include page="/parts/header.jsp"></jsp:include>
 <jsp:include page="/parts/sidemenu.jsp"></jsp:include>
-<div class=main">
+<div class="main">
 <c:forEach var="s" items="${select_student }">
 	<c:set var="select_student_name" value="${s.student_name }"/>
 </c:forEach>

@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <jsp:include page="/parts/header.jsp"></jsp:include>
 <jsp:include page="/parts/sidemenu.jsp"></jsp:include>
-<div class=main">
+<div class="main">
 	<form action="/sms/studentmanagement/insert/commit" method="post">
 		学生名　:<input type="text" name="name"><br>
 		学校名　:<select name="school_id">

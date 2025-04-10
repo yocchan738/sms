@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <jsp:include page="/parts/header.jsp"></jsp:include>
 <jsp:include page="/parts/sidemenu.jsp"></jsp:include>
-<div class=main">
+<div class="main">
 <h2>削除したい学生を選択してください。</h2><br>
 	<div>
 		<form action="/sms/studentmanagement/delete/commit" method="post">
