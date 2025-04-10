@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <title>
-    Header
+    Score Management System
   </title>
   <style>
     

@@ -4,7 +4,7 @@
 <jsp:include page="/parts/header.jsp"></jsp:include>
 <jsp:include page="/parts/sidemenu.jsp"></jsp:include>
 	<div class="main">
-	<p>選択してください</p>
+	<p>変更する成績を選択してください</p>
 	<form action="/sms/scoremanagement/update" method="post">
 		<select name="score_id">
 		<c:forEach var="s" items="${list_scores }">
