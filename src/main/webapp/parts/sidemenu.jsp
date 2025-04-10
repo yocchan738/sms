@@ -16,7 +16,7 @@
       <div class="menu">
 
         <a class="item" href=/sms/studentmanagement/studentlist>
-          <i class="search icon"></i>学生一覧
+          <i class="search icon"></i>学生管理一覧
         </a>
         <a class="item" href=/sms/studentmanagement/insert>
           <i class="search icon"></i>学生登録
@@ -37,7 +37,7 @@
       <div class="menu">
 
         <a class="item" href=>
-          <i class="search icon"></i>科目一覧
+          <i class="search icon"></i>科目管理一覧
         </a>
         <a class="item" href=>
           <i class="search icon"></i>科目登録
