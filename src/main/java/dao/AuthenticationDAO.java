@@ -22,7 +22,7 @@ public class AuthenticationDAO extends DAO {
 		while (rs.next()) {
 			authentication=new Authentication();
 			authentication.setId(rs.getInt("id"));
-			authentication.setLogin(rs.getString("login_id"));
+			authentication.setLoginId(rs.getString("login_id"));
 			authentication.setPassword(rs.getString("password"));
 		}
 		
