@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import bean.Bean;
 import dao.StudentDAO;
 
-@WebServlet(urlPatterns = {"/studentmanegement/studentdeleteselect"})
+@WebServlet(urlPatterns = {"/studentmanagement/delete/select"})
 public class StudentDeleteSelect extends HttpServlet {
 
 	public void doGet(
@@ -24,7 +24,7 @@ public class StudentDeleteSelect extends HttpServlet {
 			StudentDAO dao=new StudentDAO();
 			List<Bean> student_list=dao.searchStudent("");
 			request.setAttribute("student_list", student_list);
-			request.getRequestDispatcher("/student_manegement/student_delete_select.jsp").forward(request, response);
+			request.getRequestDispatcher("/student_management/student_delete_select.jsp").forward(request, response);
 		} catch(Exception e) {
 			e.printStackTrace(out);
 		}

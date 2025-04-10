@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import bean.Bean;
 import dao.StudentDAO;
 
-@WebServlet(urlPatterns = {"/studentmanegement/studentdeletecomit"})
+@WebServlet(urlPatterns = {"/studentmanagement/delete/commit"})
 public class StudentDeleteComit extends HttpServlet {
 
 	public void doPost(
@@ -28,7 +28,7 @@ public class StudentDeleteComit extends HttpServlet {
 			if (line>0) {
 				
 			}
-			request.getRequestDispatcher("/student_manegement/student_delete_comit.jsp").forward(request, response);
+			request.getRequestDispatcher("/student_management/student_delete_commit.jsp").forward(request, response);
 		} catch (Exception e) {
 			e.printStackTrace(out);
 			out.println("失敗");

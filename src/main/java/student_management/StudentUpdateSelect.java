@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import bean.Bean;
 import dao.StudentDAO;
 
-@WebServlet(urlPatterns = { "/studentmanagement/studentupdateselect" })
+@WebServlet(urlPatterns = { "/studentmanagement/update/select" })
 public class StudentUpdateSelect extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
