@@ -35,6 +35,7 @@ header {
   padding: 10px;
 }
 
+
 ul.header_nav {
   list-style: none;
   display: flex;
@@ -133,6 +134,10 @@ ul li a {
     left: 0;
     bottom: 0;
     text-align: center;
+  }
+  
+  .main {
+    margin-left: 15%; 
   }
 
   </style>
