@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import bean.Bean;
 import dao.StudentDAO;
 
-@WebServlet(urlPatterns = { "/studentmanegement/update" })
+@WebServlet(urlPatterns = { "/studentmanagement/update" })
 public class StudentUpdate extends HttpServlet {
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
