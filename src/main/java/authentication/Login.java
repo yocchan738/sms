@@ -29,7 +29,7 @@ public class Login extends HttpServlet {
                
                 HttpSession session = request.getSession();
                 session.setAttribute("user", auth);
-                response.sendRedirect("login_success.jsp");
+                response.sendRedirect("/sms/top_page/top_page.jsp");
             } else {
                 
                 request.setAttribute("error", "Invalid login ID or password");
