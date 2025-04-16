@@ -10,16 +10,16 @@
     <div class="item_menu">
       <div class="menu">
 
-        <a class="item" href=/sms/studentmanagement/list>
+        <a class="item" href="/sms/studentmanagement/list">
           <i class="search icon"></i>学生管理一覧
         </a>
-        <a class="item" href=/sms/studentmanagement/insert>
+        <a class="item" href="/sms/studentmanagement/insert">
           <i class="search icon"></i>学生登録
         </a>
-        <a class="item" href=/sms/studentmanagement/update/select>
+        <a class="item" href="/sms/studentmanagement/update/select">
           <i class="search icon"></i>学生変更
         </a>
-        <a class="item" href=/sms/studentmanagement/delete/select>
+        <a class="item" href="/sms/studentmanagement/delete/select">
           <i class="search icon"></i>学生削除
         </a>
 
@@ -34,16 +34,16 @@
     <div class="item_menu">
       <div class="menu">
 
-        <a class="item" href=/sms/subjectmanagement/list>
+        <a class="item" href="/sms/subjectmanagement/list">
           <i class="search icon"></i>科目管理一覧
         </a>
-        <a class="item" href=/sms/subjectmanagement/insert>
+        <a class="item" href="/sms/subjectmanagement/insert">
           <i class="search icon"></i>科目登録
         </a>
-        <a class="item" href=/sms/subjectmanagement/update/select>
+        <a class="item" href="/sms/subjectmanagement/update/select">
           <i class="search icon"></i>科目変更
         </a>
-        <a class="item" href=>
+        <a class="item" href="/sms/subjectmanagement/delete/select">
           <i class="search icon"></i>科目削除
         </a>
       </div>
@@ -54,21 +54,22 @@
     </div>
     <div class="item _menu">
       <div class="menu">
-
-
-        <a class="item" href=/sms/studentscoremanagement/search>
+		<a class="item" href="/sms/scoremanagement/list">
+          <i class="search icon"></i>成績一覧
+        </a>
+        <a class="item" href="/sms/studentscoremanagement/search">
           <i class="search icon"></i>学生別成績一覧
         </a>
-        <a class="item" href=/sms/subjectscoremanagement/search>
+        <a class="item" href="/sms/subjectscoremanagement/search">
           <i class="search icon"></i>科目別成績一覧
         </a>
-        <a class="item" href=/sms/scoremanagement/insert>
+        <a class="item" href="/sms/scoremanagement/insert">
           <i class="search icon"></i>成績登録
         </a>
-        <a class="item" href=/sms/scoremanagement/update/select>
+        <a class="item" href="/sms/scoremanagement/update/select">
           <i class="search icon"></i>成績変更
         </a>
-        <a class="item" href=/sms/scoremanagement/delete/select>
+        <a class="item" href="/sms/scoremanagement/delete/select">
           <i class="search icon"></i>成績削除
         </a>
 
