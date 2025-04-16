@@ -4,9 +4,9 @@
 <jsp:include page="/parts/sidemenu.jsp"></jsp:include>
 <div class="main">
     <p>データを更新する学生を選んでください</p><br>
-    <form action="/sms/studentmanegement/update" method="post">
+    <form action="/sms/studentmanagement/update" method="post">
         <select name="id">
-            <c:forEach var="s" items="${list }">
+            <c:forEach var="s" items="${student_list }">
                 学生名 :<option value="${s.student_id}">${s.student_name}</option><br>
             </c:forEach>
         </select>

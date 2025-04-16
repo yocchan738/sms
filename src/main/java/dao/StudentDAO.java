@@ -664,7 +664,7 @@ public class StudentDAO extends DAO {
 		Connection con=getConnection();
 		
 		PreparedStatement st=con.prepareStatement(
-				"update student set student_name=?, class_id=?, school_id=? where class_id=?");
+				"update student set student_name=?, class_id=?, school_id=? where student_id=?");
 		st.setString(1, s.getStudent_name());
 		st.setInt(2, s.getClass_id());
 		st.setInt(3, s.getSchool_id());

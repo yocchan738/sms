@@ -21,11 +21,13 @@ public class StudentUpdateCommit extends HttpServlet{
 			) throws ServletException, IOException {
 		PrintWriter out=response.getWriter();
 		try {
-			String name=request.getParameter("name");
+			int student_id=Integer.parseInt(request.getParameter("student_id"));
+			String name=request.getParameter("student_name");
 			int class_id=Integer.parseInt(request.getParameter("class_id"));
 			int school_id=Integer.parseInt(request.getParameter("school_id"));
 			
 			Bean p=new Bean();
+			p.setStudent_id(student_id);
 			p.setStudent_name(name);
 			p.setClass_id(class_id);
 			p.setSchool_id(school_id);
