@@ -157,7 +157,23 @@
   0% { transform: rotateX(0deg); }
   100% { transform: rotateX(360deg); }
 }
-  
+
+.controls {
+  position: absolute;
+  bottom: 20px;
+  left: 46%;
+  transform: translateX(-50%);
+  color: white;
+  font-family: sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+ 
+#speedRange {
+  width: 200px;
+  margin-left: 10px;
+}
+
   </style>
 </head>
 <body>
@@ -205,6 +221,31 @@
         </div>
       </div>
     </div>
+    <div class="controls">
+      <label for="speedRange">回転速度:</label>
+      <input type="range" id="speedRange" min=".5" max="10" value="5">
+    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const slider = document.getElementById('speedRange');
+        const hexaPrism = document.querySelector('.hexagonal-prism');
+        const quadPrisms = document.querySelectorAll('.quadrangular-prism'); // ← 複数対応！
+      
+        // 初期アニメーション速度をスライダーの値に合わせる
+        hexaPrism.style.animationDuration = `\${slider.value}s`;
+        quadPrisms.forEach(p => {
+          p.style.animationDuration = `\${slider.value}s`;
+        });
+      
+        slider.addEventListener('input', () => {
+          const speed = slider.value;
+          hexaPrism.style.animationDuration = `\${speed}s`;
+          quadPrisms.forEach(p => {
+            p.style.animationDuration = `\${speed}s`;
+          });
+        });
+      });
+    </script>
   </div>
 </body>
 </html>
