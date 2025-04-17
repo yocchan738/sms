@@ -170,10 +170,10 @@
     <div class="item1">
       <div class="scene">
         <div class="quadrangular-prism quad">
-          <div class="face face1"><a href="/sms/studentmanagement/list" target="_blank">学生管理一覧</a></div>
-          <div class="face face2"><a href="/sms/studentmanagement/delete/select" target="_blank">学生削除</a></div>
-          <div class="face face3"><a href="/sms/studentmanagement/update/select" target="_blank">学生変更</a></div>
-          <div class="face face4"><a href="/sms/studentmanagement/insert" target="_blank">学生登録</a></div>
+          <div class="face face1"><a href="/sms/studentmanagement/list">学生管理一覧</a></div>
+          <div class="face face2"><a href="/sms/studentmanagement/delete/select">学生削除</a></div>
+          <div class="face face3"><a href="/sms/studentmanagement/update/select">学生変更</a></div>
+          <div class="face face4"><a href="/sms/studentmanagement/insert">学生登録</a></div>
         </div>
       </div>
     </div>
@@ -183,10 +183,10 @@
     <div class="item1">
       <div class="scene">
         <div class="quadrangular-prism quad">
-          <div class="face face1"><a href="/sms/subjectmanagement/list" target="_blank">科目登録</a></div>
-          <div class="face face2"><a href="/sms/subjectmanagement/delete/select" target="_blank">科目削除</a></div>
-          <div class="face face3"><a href="/sms/subjectmanagement/update/select" target="_blank">科目変更</a></div>
-          <div class="face face4"><a href="/sms/subjectmanagement/insert" target="_blank">科目登録</a></div>
+          <div class="face face1"><a href="/sms/subjectmanagement/list">科目登録</a></div>
+          <div class="face face2"><a href="/sms/subjectmanagement/delete/select">科目削除</a></div>
+          <div class="face face3"><a href="/sms/subjectmanagement/update/select">科目変更</a></div>
+          <div class="face face4"><a href="/sms/subjectmanagement/insert">科目登録</a></div>
         </div>
       </div>
     </div>
@@ -196,12 +196,12 @@
     <div class="item2">
       <div class="scene">
         <div class="hexagonal-prism hexa">
-          <div class="facea face1"><a href="/sms/scoremanagement/list" target="_blank">成績一覧</a></div>
-          <div class="facea face2"><a href="/sms/scoremanagement/delete/select" target="_blank">成績削除</a></div>
-          <div class="facea face3"><a href="/sms/scoremanagement/update/select" target="_blank">成績変更</a></div>
-          <div class="facea face4"><a href="/sms/scoremanagement/insert" target="_blank">成績登録</a></div>
-          <div class="facea face5"><a href="/sms/subjectscoremanagement/search" target="_blank">科目別成績一覧</a></div>
-          <div class="facea face6"><a href="/sms/studentscoremanagement/search" target="_blank">学生別成績一覧</a></div>
+          <div class="facea face1"><a href="/sms/scoremanagement/list">成績一覧</a></div>
+          <div class="facea face2"><a href="/sms/scoremanagement/delete/select">成績削除</a></div>
+          <div class="facea face3"><a href="/sms/scoremanagement/update/select">成績変更</a></div>
+          <div class="facea face4"><a href="/sms/scoremanagement/insert">成績登録</a></div>
+          <div class="facea face5"><a href="/sms/subjectscoremanagement/search">科目別成績一覧</a></div>
+          <div class="facea face6"><a href="/sms/studentscoremanagement/search">学生別成績一覧</a></div>
         </div>
       </div>
     </div>
