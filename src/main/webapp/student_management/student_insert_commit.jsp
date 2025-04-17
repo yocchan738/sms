@@ -3,6 +3,6 @@
 <jsp:include page="/parts/header.jsp"></jsp:include>
 <jsp:include page="/parts/sidemenu.jsp"></jsp:include>
 <div class="main">
-	<p>削除に成功しました。</p>
+	<p>追加に成功しました。</p>
 </div>
 <jsp:include page="/parts/footer.jsp"></jsp:include>

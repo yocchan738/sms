@@ -26,7 +26,7 @@ public class SubjectInsert extends HttpServlet {
 			request.setAttribute("list", list);
 			request.getRequestDispatcher("/subject_management/subject_insert.jsp").forward(request, response);
 		} catch(Exception e) {
-			e.printStackTrace(out);
+			request.getRequestDispatcher("/top_page/error.jsp").forward(request, response);
 		}
 	}
 }

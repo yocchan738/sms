@@ -26,7 +26,7 @@ public class SubjectUpdateSelect extends HttpServlet {
 			request.setAttribute("subject_list", subject_list);
 			request.getRequestDispatcher("/subject_management/subject_update_select.jsp").forward(request, response);
 		} catch(Exception e) {
-			e.printStackTrace(out);
+			request.getRequestDispatcher("/top_page/error.jsp").forward(request, response);
 		}
 	}
 }

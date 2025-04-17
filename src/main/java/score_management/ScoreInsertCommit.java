@@ -41,7 +41,7 @@ public class ScoreInsertCommit extends HttpServlet {
 	            }
 	        } catch (Exception e) {
 	            // 例外が発生した場合、失敗画面に遷移
-	            request.getRequestDispatcher("/insert/failure.jsp").forward(request, response);
+	        	request.getRequestDispatcher("/top_page/error.jsp").forward(request, response);
 	        }
 	    }
 }

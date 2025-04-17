@@ -42,7 +42,7 @@ public class StudentUpdate extends HttpServlet {
             request.setAttribute("select_school", select_school);
             request.getRequestDispatcher("/student_management/student_update.jsp").forward(request, response);
         } catch (Exception e) {
-        	e.printStackTrace(out);
+        	request.getRequestDispatcher("/top_page/error.jsp").forward(request, response);
         }
         
     }

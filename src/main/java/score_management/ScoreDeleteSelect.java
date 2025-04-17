@@ -26,7 +26,7 @@ public class ScoreDeleteSelect extends HttpServlet {
 				request.setAttribute("list_scores", list_scores);
 				request.getRequestDispatcher("/score_management/score_delete_select.jsp").forward(request, response);
 			} catch(Exception e) {
-				e.printStackTrace(out);
+				request.getRequestDispatcher("/top_page/error.jsp").forward(request, response);
 			}
 	}
 }

@@ -29,7 +29,7 @@ public class StudentScoreList extends HttpServlet {
 			request.setAttribute("list_sum_avg", list_sum_avg);
 			request.getRequestDispatcher("/student_score_management/student_score_list.jsp").forward(request, response);
 		} catch(Exception e) {
-			e.printStackTrace(out);
+			request.getRequestDispatcher("/top_page/error.jsp").forward(request, response);
 		}
 	}
 }

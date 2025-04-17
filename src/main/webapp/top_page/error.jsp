@@ -1,8 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%> 
+    
 <jsp:include page="/parts/header.jsp"></jsp:include>
 <jsp:include page="/parts/sidemenu.jsp"></jsp:include>
 <div class="main">
-	<p>削除に成功しました。</p>
+	<h1><span style="color: red;">wasted!</span></h1>
 </div>
 <jsp:include page="/parts/footer.jsp"></jsp:include>

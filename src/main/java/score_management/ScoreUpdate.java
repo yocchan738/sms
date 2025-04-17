@@ -63,8 +63,7 @@ public class ScoreUpdate extends HttpServlet {
             // score_manegement/score_update.jsp にフォワードして画面表示
             request.getRequestDispatcher("/score_management/score_update.jsp").forward(request, response);
         } catch (Exception e) {
-            // 例外発生時、エラーメッセージのスタックトレースを出力
-            e.printStackTrace(out);
+        	request.getRequestDispatcher("/top_page/error.jsp").forward(request, response);
         }
 	}
 }

@@ -44,8 +44,7 @@ public class SubjectUpdateCommit extends HttpServlet{
             }
         } catch (Exception e) {
             // 例外が発生した場合、失敗画面に遷移
-            //request.getRequestDispatcher("/errorpage/error.jsp").forward(request, response);
-        	e.printStackTrace(out);
+        	request.getRequestDispatcher("/top_page/error.jsp").forward(request, response);
         }
     }
 }

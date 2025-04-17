@@ -26,7 +26,7 @@ public class StudentScoreSearch extends HttpServlet {
 			request.setAttribute("list", list);
 			request.getRequestDispatcher("/student_score_management/student_score_search.jsp").forward(request, response);
 		} catch(Exception e) {
-			e.printStackTrace(out);
+			request.getRequestDispatcher("/top_page/error.jsp").forward(request, response);
 		}
 	}
 }

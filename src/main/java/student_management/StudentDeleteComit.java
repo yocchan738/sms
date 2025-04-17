@@ -30,8 +30,7 @@ public class StudentDeleteComit extends HttpServlet {
 			}
 			request.getRequestDispatcher("/student_management/student_delete_commit.jsp").forward(request, response);
 		} catch (Exception e) {
-			e.printStackTrace(out);
-			out.println("失敗");
+			request.getRequestDispatcher("/top_page/error.jsp").forward(request, response);
 		}
 	}
 }

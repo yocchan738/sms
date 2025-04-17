@@ -35,12 +35,10 @@ public class StudentUpdateCommit extends HttpServlet{
 			StudentDAO dao=new StudentDAO();
 			int line=dao.updateStudent(p);
 			if (line>0) {
-				
+				request.getRequestDispatcher("/student_management/student_update_commit.jsp").forward(request, response);
 			}
-			request.getRequestDispatcher("/student_management/student_update_commit.jsp").forward(request, response);
 		} catch (Exception e) {
-			e.printStackTrace(out);
-			out.println("失敗");//error pageへ
+			request.getRequestDispatcher("/top_page/error.jsp").forward(request, response);
 		}
 	}
 }

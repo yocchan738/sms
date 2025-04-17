@@ -30,10 +30,10 @@ public class StudentInsertCommit extends HttpServlet{
 			StudentDAO dao=new StudentDAO();
 			int line=dao.insertStudent(p);
 			if (line>0) {
-				out.println("<div class='content'><p>追加に成功しました。</p>");//forwardしてくれ
+				request.getRequestDispatcher("/student_management/student_insert_commit.jsp").forward(request, response);
 			}
 		} catch (Exception e) {
-			e.printStackTrace(out);
+			request.getRequestDispatcher("/top_page/error.jsp").forward(request, response);
 		}
 	}
 }

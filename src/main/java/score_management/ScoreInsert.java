@@ -28,7 +28,7 @@ public class ScoreInsert extends HttpServlet {
 				request.setAttribute("list_subject", list_subject);
 				request.getRequestDispatcher("/score_management/score_insert.jsp").forward(request, response);
 			} catch(Exception e) {
-				e.printStackTrace(out);
+				request.getRequestDispatcher("/top_page/error.jsp").forward(request, response);
 			}
 	}
 }

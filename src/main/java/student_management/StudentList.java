@@ -26,7 +26,7 @@ public class StudentList extends HttpServlet {
 			request.setAttribute("list", list);
 			request.getRequestDispatcher("/student_management/student_list.jsp").forward(request, response);
 		} catch(Exception e) {
-			e.printStackTrace(out);
+			request.getRequestDispatcher("/top_page/error.jsp").forward(request, response);
 		}
 	}
 }

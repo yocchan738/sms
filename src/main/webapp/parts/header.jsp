@@ -147,10 +147,10 @@ ul li a {
 <body>
 
   <header>
-    <h1><a href="top_page.jsp" class="title">得点管理システム</a></h1>
+    <h1><a href="/sms/top_page/top_page.jsp" class="title">得点管理システム</a></h1>
       <nav>
         <ul class="header_nav">
-            <li class="logout_btn"><a href="">Logout</a></li>
+            <li class="logout_btn"><a href="/sms/authentication/logout">Logout</a></li>
         </ul>
     </nav>
 </header>

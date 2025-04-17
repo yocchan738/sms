@@ -31,7 +31,7 @@ public class ScoreDeleteCommit extends HttpServlet {
 				request.getRequestDispatcher("/score_management/score_delete_commit.jsp").forward(request, response);
 			}
 		} catch (Exception e) {
-			e.printStackTrace(out);
+			request.getRequestDispatcher("/top_page/error.jsp").forward(request, response);
 		}
 	}
 }

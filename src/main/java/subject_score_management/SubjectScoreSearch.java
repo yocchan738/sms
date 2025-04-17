@@ -26,7 +26,7 @@ public class SubjectScoreSearch extends HttpServlet {
 			request.setAttribute("list", list);
 			request.getRequestDispatcher("/subject_score_management/subject_score_search.jsp").forward(request, response);
 		} catch(Exception e) {
-			e.printStackTrace(out);
+			request.getRequestDispatcher("/top_page/error.jsp").forward(request, response);
 		}
 	}
 }

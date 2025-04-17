@@ -37,7 +37,7 @@ public class ScoreUpdateCommit extends HttpServlet {
 				request.getRequestDispatcher("/score_management/score_update_commit.jsp").forward(request, response);
 			}
 		} catch (Exception e) {
-			e.printStackTrace(out);
+			request.getRequestDispatcher("/top_page/error.jsp").forward(request, response);
 		}
 	}
 }
